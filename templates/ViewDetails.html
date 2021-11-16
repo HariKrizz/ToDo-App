@@ -1,0 +1,34 @@
+
+{% extends 'base.html' %}
+
+<!DOCTYPE html>
+<html lang="en">
+{% block body %}
+<!-- TaskView Page  -->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="banner">
+                <div class="banner-text">
+                  <h1>todo Menu Details</h1> 
+                </div>
+            </div>
+        </div>
+    </div>
+        <div class="col-md-6">
+            <h4>Completed Task</h4> 
+            <div class="shadow card">
+                <div class="card-body">
+                    <h5 class="card-title">{{obj.name}}</h5>
+                    <p><b>{{obj.priority}}</b></p>
+                    <p><b>{{obj.date}}</b></p>
+                    <a class=" btn btn-success" href="{% url 'update' obj.id %}">Update Task</a>&nbsp;
+                    <a class=" btn btn-danger" href="{% url 'delete' obj.id %}">Delete Task</a>     
+                </div>
+            </div>
+            <br>
+        </div>
+            
+</div>           
+{% endblock %}
+</html>

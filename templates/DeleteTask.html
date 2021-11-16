@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+
+
+{% block body %}
+<center>
+    <br>
+    <br>
+    <div class="row-cols-md-2">
+        <form method="POST" class="p-5 shadow-lg">
+            {% csrf_token %}
+            <h3>Are you sure to Delete this Task?</h3>
+            <br>
+            <button class="btn btn-danger" style="width: 100px;">Confirm</button>
+        </form>
+    </div>
+</center> 
+{% endblock %}
+    
